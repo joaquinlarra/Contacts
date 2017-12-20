@@ -1,0 +1,24 @@
+{
+  "name": "contact-listing",
+  "version": "1.0.0",
+  "description": "This is my first nodejs app. It manage a list of contacts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V1nz3nt/contact-listing.git"
+  },
+  "keywords": [
+    "contact",
+    "listing",
+    "nodejs"
+  ],
+  "author": "Vincent",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/V1nz3nt/contact-listing/issues"
+  },
+  "homepage": "https://github.com/V1nz3nt/contact-listing#readme"
+}
