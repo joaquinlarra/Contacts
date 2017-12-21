@@ -10,7 +10,8 @@ gulp.task("bundle", function () {
         debug: true,
         transform: [
             babelify.configure({
-                presets: ['es2015', 'react']
+                presets: ['es2015', 'react'],
+                plugins: ["transform-decorators-legacy", "transform-class-properties"]
             })
         ]
     }).transform(reactify)

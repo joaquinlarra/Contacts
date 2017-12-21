@@ -1,7 +1,7 @@
 'use strict';
 
 var hashGenerator = require("../utils/identifier.utils");
-var contacts = [];
+var contacts = [{'name':'Mock data', 'number':'0123456789'}];
 
 exports.loadAll = function() {
 	return contacts;

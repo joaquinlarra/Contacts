@@ -1,20 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Contact from './contact.jsx';
+import {observer} from 'mobx-react';
+import Store from './contacts.client.store.js';
 
-function render(){
-    ReactDOM.render(<Contact contactJson={{'name':'USE MOBX', 'number':'0123456789'}} />, document.getElementById("container"));    
-}
-render();
+@observer
+class App extends React.Component{
+	constructor (props) {
+	    super(props);
+	    this.items = this.props.store.fetch.bind(this);
+  	}
 
-/*
-var React = require("react");
-var ReactDOM = require("react-dom");
-var Contact = require("./contact.jsx");
-                
-function render(){
-    ReactDOM.render(<Contact contactJson={{'name':'USE MOBX', 'number':'0123456789'}} />, document.getElementById("container"));    
-}
-render();
-*/
+	componentWillMount(){
+		console.log("willMount ...");
+		this.props.store.fetch();
+	}
 
+	componentDidMount() {
+		console.log("didMount ...");
+		//this.props.store.fetch();
+	}
+
+    render(){
+        return(
+        	<div>
+        	{
+        		this.items.map(
+        			(item, key) => { <Contact contactJson={item} /> }
+        		)
+        	}
+        	</div>
+        );
+    }
+};
+
+const store = new Store();
+
+ReactDOM.render(<App store={store} />, document.getElementById("container"));
