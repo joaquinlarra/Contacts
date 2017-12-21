@@ -1,5 +1,6 @@
 'use strict';
 
+var moment = require('moment');
 var contactsStore = require('../persistence/contacts.store');
 
 exports.listAll = function(req, res) {
@@ -33,7 +34,9 @@ exports.delete = function(req, res){
 
 
 function _logRequest(operation, req){
-	console.log(operation);
+	let m = moment();
+	let ts = m.format();
+	console.log(ts + " " + operation);
 	console.log("HEADERS >");
 	console.log(req.headers);
 	console.log("BODY >");
