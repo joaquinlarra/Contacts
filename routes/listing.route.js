@@ -15,4 +15,8 @@ module.exports = function(app) {
   app.route('/contacts/update')
   	.get(adviceController.error404)
   	.post(listingController.update);
+
+  app.route('/contacts/delete/:id')
+  	.get(adviceController.error404)
+  	.post(listingController.delete);
 };

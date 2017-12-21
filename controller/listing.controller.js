@@ -1,12 +1,20 @@
 'use strict';
 
-var contactsStore = require('../persistence/ContactsStore');
+var contactsStore = require('../persistence/contacts.store');
 
 exports.listAll = function(req, res) {
 	_logRequest("LIST ALL", req);
 	
   	res.send( contactsStore.loadAll() );
 };
+
+exports.insert = function(req, res){
+	_logRequest("INSERT", req);
+
+	//some kind of validation
+	contactsStore.insertOne(req.body);
+	res.send( null );
+}
 
 exports.update = function(req, res){
 	_logRequest("UPDATE", req);
@@ -16,12 +24,13 @@ exports.update = function(req, res){
 	res.send( null );
 }
 
-exports.insert = function(req, res){
-	_logRequest("INSERT", req);
+exports.delete = function(req, res){
+	_logRequest("DELETE", req);
 
-	contactsStore.insertOne(req.body);
+	contactsStore.deleteOne(req.params.id);
 	res.send( null );
 }
+
 
 function _logRequest(operation, req){
 	console.log(operation);
