@@ -1,35 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Contact from './contact.jsx';
+import {observable} from 'mobx';
 import {observer} from 'mobx-react';
 import Store from './contacts.client.store.js';
+import moment from 'moment';
 
 @observer
 class App extends React.Component{
 	constructor (props) {
 	    super(props);
-	    this.items = this.props.store.fetch.bind(this);
+        this.state = {data : []};
   	}
 
 	componentWillMount(){
-		console.log("willMount ...");
-		this.props.store.fetch();
+        this.setState({
+            data: this.props.store.contacts
+        });
 	}
 
 	componentDidMount() {
-		console.log("didMount ...");
-		//this.props.store.fetch();
 	}
 
+    componentDidUpdate(){
+    }
+
     render(){
-        return(
-        	<div>
-        	{
-        		this.items.map(
-        			(item, key) => { <Contact contactJson={item} /> }
-        		)
-        	}
-        	</div>
+        var components;
+        if (this.state.data.length == 0){
+            components = <h1>Here will appear a contact info</h1>; 
+        } else {
+            components = this.state.data.map(function(item) {
+                return (
+                    <Contact id={item.id} contactJson={item} />
+                );
+            });
+        }
+
+        return (
+            <div>
+                {components}
+            </div>
         );
     }
 };
