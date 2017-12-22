@@ -6,7 +6,7 @@ var babelify = require('babelify');
 
 gulp.task("bundle", function () {
     return browserify({
-        entries: "./assets/main.jsx",
+        entries: "./assets/react/main.jsx",
         debug: true,
         transform: [
             babelify.configure({
@@ -20,12 +20,11 @@ gulp.task("bundle", function () {
         .pipe(gulp.dest("./dist"))
 });
 
-// ,"app/lib/bootstrap-css/css/bootstrap.min.css","app/style.css"
 gulp.task("copy", ["bundle"], function () {
-    return gulp.src(["assets/index.html"])
+    return gulp.src(["assets/index.html", "assets/external/bootstrap/dist/css/bootstrap.css"])
         .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("default",["copy"],function(){
-   console.log("Gulp completed..."); 
+gulp.task("build:default",["copy"],function(){
+   console.log("Gulp TASK completed."); 
 });
