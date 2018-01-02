@@ -61,3 +61,7 @@ typings/
 
 #sublime
 .sublime*
+
+#idea
+idea
+idea/*
