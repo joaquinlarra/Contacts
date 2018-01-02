@@ -19,4 +19,6 @@ routes(app); //register the route
 app.listen(port);
 
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log("---------------------------------------------");
+console.log('RESTful API server started on port ' + port);
+console.log("---------------------------------------------");

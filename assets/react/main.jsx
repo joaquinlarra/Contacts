@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Contact from './contact.jsx';
-import {observable} from 'mobx';
+import AddContact from "./contact.add.form.jsx";
 import {observer} from 'mobx-react';
 import ContactStore from '../mobx/contact.store.js';
-import moment from 'moment';
 
 @observer
 class App extends React.Component{
@@ -38,9 +37,12 @@ class App extends React.Component{
         }
 
         return (
-            <ul className="list-group">
-                {components}
-            </ul>
+            <div>
+                <AddContact store={this.props.store}/>
+                <ul className="list-group">
+                    {components}
+                </ul>
+            </div>
         );
     }
 };

@@ -3,6 +3,9 @@ var browserify = require("browserify");
 var reactify = require("reactify");
 var source = require("vinyl-source-stream");
 var babelify = require('babelify');
+var less = require('gulp-less');
+var path = require('path');
+var clean = require('gulp-clean');
 
 gulp.task("bundle", function () {
     return browserify({
@@ -20,7 +23,18 @@ gulp.task("bundle", function () {
         .pipe(gulp.dest("./dist"))
 });
 
-gulp.task("copy", ["bundle"], function () {
+gulp.task('less', function () {
+    return gulp.src('assets/css/*.less')
+        .pipe(less())
+        .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('clean', function () {
+    return gulp.src('dist/*', {read: false})
+        .pipe(clean());
+});
+
+gulp.task("copy", ["clean", "less", "bundle"], function () {
     return gulp.src(["assets/index.html", "assets/external/bootstrap/dist/css/bootstrap.css"])
         .pipe(gulp.dest("./dist"));
 });
