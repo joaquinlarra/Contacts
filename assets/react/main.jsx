@@ -27,7 +27,7 @@ class App extends React.Component{
     render(){
         var components;
         if (this.state.data.length == 0){
-            components = <h1>Here will appear a contact info</h1>; 
+            components = <span>No contacts found.</span>;
         } else {
             components = this.state.data.map(function(item) {
                 return (
@@ -39,7 +39,7 @@ class App extends React.Component{
         return (
             <div>
                 <AddContact store={this.props.store}/>
-                <ul className="list-group">
+                <ul className="list-group text-center contacts-list">
                     {components}
                 </ul>
             </div>

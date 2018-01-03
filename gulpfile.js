@@ -24,8 +24,12 @@ gulp.task("bundle", function () {
 });
 
 gulp.task('less', function () {
-    return gulp.src('assets/css/*.less')
-        .pipe(less())
+    return gulp.src(["assets/css/*.less", "assets/external/open-iconic/font/css/open-iconic.less"])
+        .pipe(less(
+            {
+                paths: [ path.join(__dirname, 'fonts') ]
+            }
+        ))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -34,8 +38,13 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task("copy", ["clean", "less", "bundle"], function () {
-    return gulp.src(["assets/index.html", "assets/external/bootstrap/dist/css/bootstrap.css"])
+gulp.task("copy-fonts", function () {
+    return gulp.src(["assets/external/open-iconic/font/fonts/*.*"])
+        .pipe(gulp.dest("./dist/fonts"));
+});
+
+gulp.task("copy", ["clean", "copy-fonts", "less", "bundle"], function () {
+    return gulp.src(["assets/index.html", "assets/external/bootstrap/dist/css/bootstrap.css", 'assets/images/*.jpg', 'assets/external/open-iconic/font/css/fonts/*'])
         .pipe(gulp.dest("./dist"));
 });
 

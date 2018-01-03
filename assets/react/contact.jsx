@@ -4,7 +4,7 @@ class Contact extends React.Component{
     render(){
         return(
             <li className="list-group-item justify-content-between">
-                {this.props.json.name}
+                <h4>{this.props.json.name}</h4>
                 <span className="badge badge-default badge-pill">{this.props.json.number}</span>
             </li>
         )

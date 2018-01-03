@@ -30,7 +30,7 @@ class AddContact extends React.Component{
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit} class="form-inline" ref="formContact">
+            <form onSubmit={this.handleSubmit} class="form-inline hidden" ref="formContact">
                 <div class="form-group">
                     <input type="text" class="form-control col-sm-12 adjust-margin" name="name" placeholder="Name"
                            value={this.state.name} onChange={this.handleChange}/>
@@ -39,7 +39,7 @@ class AddContact extends React.Component{
                     <input type="text" class="form-control col-sm-12 adjust-margin" name="number" placeholder="Number"
                            value={this.state.number} onChange={this.handleChange}/>
                 </div>
-                <button type="submit" class="btn btn-primary  adjust-margin">Add</button>
+                <button type="submit" class="btn btn-primary adjust-margin">Save</button>
             </form>
         )
     }
