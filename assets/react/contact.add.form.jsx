@@ -30,7 +30,7 @@ class AddContact extends React.Component{
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit} class="form-inline hidden" ref="formContact">
+            <form onSubmit={this.handleSubmit} class="form-inline" ref="formContact">
                 <div class="form-group">
                     <input type="text" class="form-control col-sm-12 adjust-margin" name="name" placeholder="Name"
                            value={this.state.name} onChange={this.handleChange}/>
