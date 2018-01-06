@@ -1,6 +1,5 @@
 import React from 'react';
 import Contact from './contact.jsx';
-import AddContact from "./contact.add.form.jsx";
 import SearchContact from "./contact.search.form.jsx";
 import {observer} from 'mobx-react';
 
@@ -61,14 +60,7 @@ class ContactList extends React.Component{
         // i've chosen to not expose a search operation from BE
         return (
             <div>
-                <div className="c-padding">
-                    <span class="oi oi-plus adjust-margin" data-glyph="plus"></span>
-                    <span class="oi oi-magnifying-glass" data-glyph="magnifying-glass"></span>
-                </div>
-
-                <SearchContact filterContactListHandler={this.filterContacts}/>
-                <AddContact store={this.props.store}/>
-
+                <SearchContact filterContactListHandler={this.filterContacts} />
                 <ul className="list-group text-center contacts-list">
                     {components}
                 </ul>

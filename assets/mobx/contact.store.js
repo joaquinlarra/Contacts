@@ -1,6 +1,7 @@
 import superagent from 'superagent';
 import {observable} from 'mobx';
- 
+
+//TODO use environment-safe config constant for endpoints
 
 class ContactStore {
   @observable contacts = [];
