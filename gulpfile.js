@@ -2,10 +2,13 @@ var gulp = require("gulp");
 var browserify = require("browserify");
 var reactify = require("reactify");
 var source = require("vinyl-source-stream");
+var buffer = require("vinyl-buffer");
 var babelify = require('babelify');
 var less = require('gulp-less');
 var path = require('path');
 var clean = require('gulp-clean');
+var sourcemaps = require('gulp-sourcemaps');
+var  uglify = require('gulp-uglify');
 
 gulp.task("bundle", function () {
     return browserify({
@@ -20,6 +23,10 @@ gulp.task("bundle", function () {
     }).transform(reactify)
         .bundle()
         .pipe(source("main.js"))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest("./dist"))
 });
 
