@@ -18,8 +18,8 @@ class Toggle extends React.Component {
     render(){
         var isComponentHidden = !this.state.show ? "hidden" : "";
         return(
-            <div className="clearfix">
-                <div className="pull-left">
+            <div className="clearfix toggle-area c-height-50">
+                <div className="pull-left adjust-margin adjust-icon-position">
                     <span onClick={this.handleClick} className={this.props.css} data-glyph={this.props.icon}></span>
                 </div>
                 <div className={isComponentHidden}>{this.props.component}</div>
