@@ -22,11 +22,14 @@ gulp.task("bundle", function () {
         ]
     }).transform(reactify)
         .bundle()
-        .pipe(source("main.js"))
+        .pipe(source("bundle.js"))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('.', {
+            includeContent: true,
+            sourceRoot: '/src'
+        }))
         .pipe(gulp.dest("./dist"))
 });
 
@@ -51,7 +54,11 @@ gulp.task("copy-fonts", function () {
 });
 
 gulp.task("copy", ["clean", "copy-fonts", "less", "bundle"], function () {
-    return gulp.src(["assets/index.html", "assets/external/bootstrap/dist/css/bootstrap.css", 'assets/images/*.jpg', 'assets/external/open-iconic/font/css/fonts/*'])
+    return gulp.src(["assets/index.html",
+                     "assets/external/bootstrap/dist/css/bootstrap.css",
+                     'assets/images/*.jpg',
+                     'assets/external/open-iconic/font/css/fonts/*'
+        ])
         .pipe(gulp.dest("./dist"));
 });
 
