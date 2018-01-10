@@ -7,7 +7,7 @@ var express = require('express'),
   path = require('path');
 
 
-app.use(express.static(path.join(__dirname,"../dist")));
+app.use(express.static(path.join(__dirname,"../build")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

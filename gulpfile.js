@@ -56,8 +56,7 @@ gulp.task("copy-fonts", function () {
 gulp.task("copy", ["clean", "copy-fonts", "less", "bundle"], function () {
     return gulp.src(["assets/index.html",
                      "assets/external/bootstrap/dist/css/bootstrap.css",
-                     'assets/images/*.jpg',
-                     'assets/external/open-iconic/font/css/fonts/*'
+                     'assets/images/*.jpg'
         ])
         .pipe(gulp.dest("./dist"));
 });
