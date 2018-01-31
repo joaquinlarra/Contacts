@@ -21,11 +21,13 @@ module.exports = {
                 use: "file-loader"
             },
             {
-                test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
+                //this will create url for referenced fonts, images, ...
+                test: /\.(jpg|png|woff|woff2|eot|ttf|svg|otf)$/,
                 use: 'url-loader?limit=100000'
             },
             {
                 test: /\.less$/i,
+                //this will scan for .less imported into index.js
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'less-loader']
@@ -48,7 +50,7 @@ module.exports = {
             filename: "./index.html"
         }),
         new CopyWebpackPlugin([
-            { from: 'assets/external/open-iconic/font/fonts', to: 'fonts' },
+           // { from: 'assets/external/open-iconic/font/fonts', to: 'fonts' },
             { from: 'assets/images', to: 'images' }
         ], {
             ignore: [],

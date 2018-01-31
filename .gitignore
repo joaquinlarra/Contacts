@@ -33,6 +33,8 @@ bower_components
 build/Release
 dist
 dist/*
+build
+build/*
 
 # Dependency directories
 node_modules/
