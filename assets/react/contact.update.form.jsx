@@ -29,3 +29,5 @@ class UpdateContact extends React.Component{
         );
     }
 }
+
+export default UpdateContact;

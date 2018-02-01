@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c206b5a-adf9-4f42-9d3f-dce9f76f8349" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/react/contact.add.form.jsx" afterPath="$PROJECT_DIR$/assets/react/contact.add.form.jsx" />
+      <change beforePath="$PROJECT_DIR$/assets/react/contact.update.form.jsx" afterPath="$PROJECT_DIR$/assets/react/contact.update.form.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,7 +51,7 @@
       <file leaf-file-name="contact.add.form.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.add.form.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
+            <state relative-caret-position="413">
               <caret line="32" column="66" lean-forward="false" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
               <folding />
             </state>
@@ -103,7 +103,7 @@
       <file leaf-file-name="contact.search.form.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.search.form.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="371">
               <caret line="19" column="71" lean-forward="false" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
               <folding />
             </state>
@@ -113,8 +113,8 @@
       <file leaf-file-name="contact.update.form.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.update.form.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="672">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -312,12 +312,12 @@
       <workItem from="1515610352338" duration="4081000" />
       <workItem from="1516790303088" duration="731000" />
       <workItem from="1517393623969" duration="9098000" />
-      <workItem from="1517482547135" duration="5208000" />
+      <workItem from="1517482547135" duration="5364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118887000" />
+    <option name="totallyTimeSpent" value="119043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="-9" width="1845" height="1098" extended-state="6" />
@@ -714,14 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/react/contact.search.form.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="71" lean-forward="false" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/react/toggle.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -758,9 +750,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/react/contact.search.form.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="19" column="71" lean-forward="false" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/react/contact.add.form.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
+        <state relative-caret-position="413">
           <caret line="32" column="66" lean-forward="false" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
           <folding />
         </state>
@@ -768,8 +768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/react/contact.update.form.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="672">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding />
         </state>
       </provider>
