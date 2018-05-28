@@ -18,6 +18,7 @@ class Contact extends React.Component{
 
     defaultState(){
         return {
+            showButtons: false,
             updateView : false
         };
     }
@@ -26,7 +27,7 @@ class Contact extends React.Component{
         if ( !this.state.updateView ){
             return(
                 <li className="list-group-item justify-content-between">
-                    <div class="pull-left">
+                    <div className="pull-left {!this.state.showButtons ? 'hide' : ''}">
                         <span onClick={this.handleUpdateViewButtonClick} class="oi oi-pencil adjust-margin" data-glyph="pencil"></span>
                         <span class="oi oi-delete" data-glyph="delete"></span>
                     </div>

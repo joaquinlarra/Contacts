@@ -1,8 +1,6 @@
 import superagent from 'superagent';
 import {observable} from 'mobx';
 
-//TODO use environment-safe config constant for endpoints
-
 class ContactStore {
   @observable contacts = [];
 
@@ -10,9 +8,15 @@ class ContactStore {
   	this.load();
   }
 
+    /**
+     * Superagent uses
+     * process.env.API_URL variable
+     * and concatenates GET method parameter value
+     */
   load(){
+    //console.log("TEST API_URL : " + process.env.API_URL);
   	superagent
-            .get('http://localhost:3000/contacts/all')
+            .get('contacts/all')
             .set('Accept', 'application/json')
             .end(
             	(error, results) => {
@@ -32,7 +36,7 @@ class ContactStore {
   add(contact){
       console.log("STORE > Sending: " + contact);
         superagent
-            .post('http://localhost:3000/contacts/add')
+            .post('/contacts/add')
             .set('Accept', 'application/json')
             .send(contact)
             .end(

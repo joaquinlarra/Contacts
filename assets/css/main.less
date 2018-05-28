@@ -1,45 +1,47 @@
-div {
-  &.container {
-    background-image: url("/images/background-cloud.jpg");
-  }
+@media print, screen {
   div {
-    &.c-padding{
-      padding:10px;
+    &.container {
+      background-image: url("/images/background-cloud.jpg");
     }
-  }
-  .adjust-margin {
-    margin-right: 5px;
-  }
-
-  .contacts-list{
-    .badge{
-      padding: 1px 7px;
-      font-size: 19px;
+    div {
+      &.c-padding {
+        padding: 10px;
+      }
     }
-    h4{
-      display: inline;
+    .adjust-margin {
+      margin-right: 5px;
     }
-  }
 
-  .toggle-area{
-    .oi{
-      cursor: pointer;
+    .contacts-list {
+      .badge {
+        padding: 1px 7px;
+        font-size: 19px;
+      }
+      h4 {
+        display: inline;
+      }
     }
-    .adjust-icon-position{
-      margin-top: 3px;
+
+    .toggle-area {
+      .oi {
+        cursor: pointer;
+      }
+      .adjust-icon-position {
+        margin-top: 3px;
+      }
     }
-  }
 
-  .oi-plus{
-    color: #006400;
-    font-size: 25px;
-  }
+    .oi-plus {
+      color: #006400;
+      font-size: 25px;
+    }
 
-  .oi-magnifying-glass{
-    font-size: 25px;
-  }
+    .oi-magnifying-glass {
+      font-size: 25px;
+    }
 
-  .c-height-50{
-    min-height: 50px;
+    .c-height-50 {
+      min-height: 50px;
+    }
   }
 }
