@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build:dev": "webpack --config webpack.config.dev.js",
     "watch": "webpack --watch",
     "start-express": "nodemon scripts/express-server.js",
     "start-express-dev": "cross-env NODE_ENV=development env-cmd ./dev.env nodemon scripts/express-server.js",
@@ -60,7 +61,8 @@
     "moment": "^2.10.0",
     "node-rest-client": "^3.1.0",
     "superagent": "^3.8.2",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "webpack-merge": "^4.1.2"
   },
   "repository": {
     "type": "git",

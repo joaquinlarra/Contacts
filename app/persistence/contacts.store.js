@@ -9,6 +9,7 @@ var contacts = [];
 // - implement deleteSet()
 
 exports.loadAll = function() {
+	console.log("SERVER SIDE : " + process.env.NODE_ENV);
 	return contacts;
 }
 

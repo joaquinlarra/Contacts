@@ -2,7 +2,6 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = {
     entry: ["./assets/index.js"],
@@ -60,15 +59,5 @@ module.exports = {
         new ExtractTextPlugin({
           filename: '[name].css'
         }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-                API_URL: JSON.stringify(process.env.API_URL)
-            }
-        }),
-        new webpack.EnvironmentPlugin([
-            'NODE_ENV',
-            'API_URL'
-        ])
     ]
 };

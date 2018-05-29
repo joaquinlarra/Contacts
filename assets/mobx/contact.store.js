@@ -8,15 +8,15 @@ class ContactStore {
   	this.load();
   }
 
-    /**
-     * Superagent uses
-     * process.env.API_URL variable
-     * and concatenates GET method parameter value
-     */
   load(){
-    //console.log("TEST API_URL : " + process.env.API_URL);
-  	superagent
-            .get('contacts/all')
+    console.log("CLIENT SIDE env: " + process.env.NODE_ENV);
+    console.log("CLIENT SIDE api: " + process.env.API_HOST);
+
+    const ALL = "http://" + process.env.API_HOST + '/contacts/all';
+    console.log(ALL);
+
+    superagent
+            .get(ALL)
             .set('Accept', 'application/json')
             .end(
             	(error, results) => {
@@ -36,7 +36,7 @@ class ContactStore {
   add(contact){
       console.log("STORE > Sending: " + contact);
         superagent
-            .post('/contacts/add')
+            .post("http://" + process.env.API_HOST + '/contacts/add')
             .set('Accept', 'application/json')
             .send(contact)
             .end(
