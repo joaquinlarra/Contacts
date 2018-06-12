@@ -10,7 +10,7 @@ const contacts = DB.get('contact'); // COLLECTION
 
 exports.loadAll = function(callback, callbackError){
     contacts.find().then((docs) => {
-        console.log(docs);
+        console.log("contacts.store - loaded " + docs.length + " docs.");
         callback(docs);
     }).catch((err) => {
         console.log("contacts.store - error : " + err);

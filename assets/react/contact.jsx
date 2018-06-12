@@ -1,5 +1,5 @@
 import React from 'react';
-import AddContact from "./contact.add.form.jsx";
+import UpdateContact from "./contact.update.form.jsx";
 
 class Contact extends React.Component{
     constructor(props) {
@@ -36,7 +36,7 @@ class Contact extends React.Component{
                 </li>
             )
         } else {
-            return (<AddContact/>) /* TODO updateContact component */
+            return (<UpdateContact key={this.props.key * 31} updateContactState={this.handleUpdateViewButtonClick} json={this.props.json}/>)
         }
     }
 }
