@@ -6,7 +6,8 @@ module.exports = merge(require('./webpack.config'), {
         // variables at compile time
         new webpack.EnvironmentPlugin({
             NODE_ENV: 'DEV',
-            API_HOST: 'localhost:3000'
+            API_HOST: 'localhost:3000',
+            DB_HOST: 'localhost:27017/contacts_db'
         })
     ]
 });

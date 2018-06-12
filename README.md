@@ -19,6 +19,7 @@ developed through React.
 Main dependencies for application are
 - Webpack 3
 - Express
+- Monk
 - React
 - Bootstrap 3.x
 
