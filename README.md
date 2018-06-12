@@ -40,13 +40,15 @@ switch to schema **use contacts_db**
 
 test query on customer collection **db.contact.find()**
 
+(already executed **db.createCollection("contact");**)
+
 ## 1.5 Profiles and Build
 
 - **npm run build:dev** for development environment
 
 ## 1.6 Execution
 
-- **npm run start-express**
+- **npm run start-express:dev**
 
 ## 1.8 Refs
 

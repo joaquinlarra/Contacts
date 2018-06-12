@@ -1,41 +1,58 @@
 'use strict';
 
-var identifierGenerator = require("../utils/identifier.utils");
-var contacts = [];
+// Contact model has fields
+// id, name, number
 
-// TODO
-// - replace contacts mock with db
-// - do validation (e.g. duplicates check)
-// - implement deleteSet()
+console.log("BE ENV : "  +process.env.DB_HOST);
 
-exports.loadAll = function() {
-	console.log("SERVER SIDE : " + process.env.NODE_ENV);
-	return contacts;
+var DB = require('monk')(process.env.DB_HOST);
+const contacts = DB.get('contact'); // COLLECTION
+
+exports.loadAll = function(callback, callbackError){
+    contacts.find().then((docs) => {
+        console.log(docs);
+        callback(docs);
+    }).catch((err) => {
+        console.log("contacts.store - error : " + err);
+        callbackError(err);
+    }).then(() => DB.close());
 }
 
-exports.insertOne = function(contact){
-	contact.id = identifierGenerator.generateUUID(contact.name);
-	contacts.push(contact);
-	console.log("inserted contact with ID " + contact.id);
+exports.insertOne = function(contact, callback, callbackError){
+    contacts.insert([contact])
+		.then(() => {
+		    console.log("contacts.store - inserted new contact");
+		    callback();
+		})
+        .catch((err) => {
+            console.log("contacts.store - error : " + err);
+            callbackError(err);
+        })
+		.then(() => DB.close());
 }
 
-exports.updateOne = function(contact){
-	for(var i = 0; i < contacts.length; i++){
-		let contactToUpdate = contacts[i];
-		if ( contact.id == contactToUpdate.id ){
-			contacts[i] = contact;
-			console.log("updated contact with ID " + contact.id);
-		}
-	}
+exports.updateOne = function(contact, callback, callbackError){
+    contacts.updateOne({_id : ObjectId(contact.id)}, {$set : {name : contcat.name, number : contact.number}})
+		.then(() => {
+		    console.log("contacts.store - updated contact with id " + contact.id);
+		    callback();
+        })
+        .catch((err) => {
+            console.log("contacts.store - error : " + err);
+            callbackError(err);
+        })
+		.then(() => DB.close());
 }
 
-exports.deleteOne = function(id){
-	for(var i = 0; i < contacts.length; i++){
-		let contact = contacts[i];
-		if ( id == contact.id ){
-			console.log("found to remove in position " + i);
-			contacts.splice(i, 1);
-			break;
-		}
-	}
+exports.deleteOne = function(id, callback, callbackError){
+    contacts.remove({ _id: ObjectId(id)})
+		.then(() => {
+		    console.log("contacts.store - deleted contact with id " + id);
+		    callback();
+        })
+        .catch((err) => {
+            console.log("contacts.store - error : " + err);
+            callbackError(err);
+        })
+		.then(() => DB.close());
 }

@@ -8,7 +8,7 @@
     "build:dev": "webpack --config webpack.config.dev.js",
     "watch": "webpack --watch",
     "start-express": "nodemon scripts/express-server.js",
-    "start-express-dev": "cross-env NODE_ENV=development env-cmd ./dev.env nodemon scripts/express-server.js",
+    "start-express:dev": "cross-env NODE_ENV=development env-cmd ./dev.env nodemon scripts/express-server.js",
     "test": "echo \"No test defined yet\" && exit 1"
   },
   "devDependencies": {
