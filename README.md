@@ -33,6 +33,7 @@ Main dependencies for application are
 
 start database server v3.6.2
 - **mongod --dbpath "<project_root>\db\contacts_db"**
+(eg. C:\projects\fe\contact-listing\db\contacts_db)
 
 Just for test, connect to database **mongo**
 

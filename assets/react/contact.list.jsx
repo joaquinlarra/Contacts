@@ -60,7 +60,7 @@ class ContactList extends React.Component{
         // i've chosen to not expose a search operation from BE
         return (
             <div>
-                <SearchContact filterContactListHandler={this.filterContacts} />
+                <SearchContact key={10} filterContactListHandler={this.filterContacts} />
                 <ul className="list-group text-center contacts-list">
                     {components}
                 </ul>

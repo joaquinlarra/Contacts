@@ -5,14 +5,8 @@ import React from 'react';
 class UpdateContact extends React.Component{
     constructor(props) {
         super(props);
-
         this.state = this.defaultState();
-
-        //TODO implement and bind handler
-    }
-
-    handleChange(event){
-
+        this.handleAnnullaClick = this.handleAnnullaClick.bind(this);
     }
 
     handleSubmit(event){
@@ -33,11 +27,21 @@ class UpdateContact extends React.Component{
     render(){
         return(
             <li className="list-group-item justify-content-between">
+                <div class="input-group col-lg-12">
                 <form>
-                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" value={this.props.json.name}/>
-                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" value={this.props.json.number}/>
-                    <button onClick={this.handleAnnullaClick}>Annulla</button>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" value={this.props.json.name}/>
+                    </div>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" value={this.props.json.number}/>
+                    </div>
+                    <div class="col-lg-2">
+                        <button className="btn btn-success oi oi-check" data-glyph="check"></button>
+                        &nbsp;
+                        <button onClick={this.handleAnnullaClick} class="btn btn-danger oi oi-action-undo" data-glyph="action-undo"></button>
+                    </div>
                 </form>
+                </div>
             </li>
         )
     }

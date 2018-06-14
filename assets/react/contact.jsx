@@ -6,37 +6,58 @@ class Contact extends React.Component{
         super(props);
         this.state = this.defaultState();
 
-        this.handleUpdateViewButtonClick = this.handleUpdateViewButtonClick.bind(this);
+        this.toggleUpdateView = this.toggleUpdateView.bind(this);
+        this.handleMouseOver = this.handleMouseOver.bind(this);
     }
 
-    handleUpdateViewButtonClick(event){
+    toggleUpdateView(event){
         event.preventDefault();
         this.setState((prevState, props) => ({
-            updateView: !prevState.updateView
+            updateView: !prevState.updateView,
+            showButtons: prevState.showButtons
         }));
+    }
+
+    handleMouseOver(event){
+        event.preventDefault();
+        /*
+        this.setState((prevState, props) => ({
+            updateView: prevState.updateView,
+            showButtons: !prevState.showButtons
+        }));
+        */
     }
 
     defaultState(){
         return {
-            showButtons: false,
+            showButtons: true,
             updateView : false
         };
     }
 
     render(){
+        var options;
+        if ( this.state.showButtons ){
+            options =
+                <div className="pull-left">
+                    <span onClick={this.toggleUpdateView} className="oi oi-pencil adjust-margin pointer" data-glyph="pencil"></span>
+                    &nbsp;
+                    <span className="oi oi-delete pointer" data-glyph="delete"></span>
+                </div>;
+        } else {
+            options = <div className="pull-left"></div>;
+        }
+
         if ( !this.state.updateView ){
             return(
-                <li className="list-group-item justify-content-between">
-                    <div className="pull-left {!this.state.showButtons ? 'hide' : ''}">
-                        <span onClick={this.handleUpdateViewButtonClick} class="oi oi-pencil adjust-margin" data-glyph="pencil"></span>
-                        <span class="oi oi-delete" data-glyph="delete"></span>
-                    </div>
+                <li onMouseOver={this.handleMouseOver} className="list-group-item justify-content-between">
+                    {options}
                     <h4>{this.props.json.name}</h4>
                     <span className="badge badge-default badge-pill">{this.props.json.number}</span>
                 </li>
             )
         } else {
-            return (<UpdateContact key={this.props.key * 31} updateContactState={this.handleUpdateViewButtonClick} json={this.props.json}/>)
+            return (<UpdateContact key={this.props.key * 31} updateContactState={this.toggleUpdateView} json={this.props.json}/>)
         }
     }
 }
