@@ -57,7 +57,7 @@ class Contact extends React.Component{
                 </li>
             )
         } else {
-            return (<UpdateContact key={this.props.key * 31} updateContactState={this.toggleUpdateView} json={this.props.json}/>)
+            return (<UpdateContact key={this.props.json._id + "_"} updateContactState={this.toggleUpdateView} json={this.props.json}/>)
         }
     }
 }

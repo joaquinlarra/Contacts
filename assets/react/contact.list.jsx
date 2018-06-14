@@ -52,7 +52,7 @@ class ContactList extends React.Component{
         } else {
             components = this.state.data.map(function(item) {
                 return (
-                    <Contact key={item.id} json={item} />
+                    <Contact key={item._id} json={item} />
                 );
             });
         }
