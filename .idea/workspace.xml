@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c206b5a-adf9-4f42-9d3f-dce9f76f8349" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/contacts_db/diagnostic.data/metrics.2018-06-14T14-32-08Z-00000" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/react/contact.jsx" afterPath="$PROJECT_DIR$/assets/react/contact.jsx" />
-      <change beforePath="$PROJECT_DIR$/assets/react/contact.list.jsx" afterPath="$PROJECT_DIR$/assets/react/contact.list.jsx" />
+      <change beforePath="$PROJECT_DIR$/assets/mobx/contact.store.js" afterPath="$PROJECT_DIR$/assets/mobx/contact.store.js" />
+      <change beforePath="$PROJECT_DIR$/assets/react/contact.update.form.jsx" afterPath="$PROJECT_DIR$/assets/react/contact.update.form.jsx" />
       <change beforePath="$PROJECT_DIR$/db/contacts_db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/db/contacts_db/WiredTiger.turtle" />
       <change beforePath="$PROJECT_DIR$/db/contacts_db/WiredTiger.wt" afterPath="$PROJECT_DIR$/db/contacts_db/WiredTiger.wt" />
       <change beforePath="$PROJECT_DIR$/db/contacts_db/collection-2-6233415125316548949.wt" afterPath="$PROJECT_DIR$/db/contacts_db/collection-2-6233415125316548949.wt" />
       <change beforePath="$PROJECT_DIR$/db/contacts_db/index-3-6233415125316548949.wt" afterPath="$PROJECT_DIR$/db/contacts_db/index-3-6233415125316548949.wt" />
-      <change beforePath="$PROJECT_DIR$/db/contacts_db/journal/WiredTigerLog.0000000005" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/db/contacts_db/mongod.lock" afterPath="$PROJECT_DIR$/db/contacts_db/mongod.lock" />
+      <change beforePath="$PROJECT_DIR$/db/contacts_db/journal/WiredTigerLog.0000000006" afterPath="$PROJECT_DIR$/db/contacts_db/journal/WiredTigerLog.0000000007" />
       <change beforePath="$PROJECT_DIR$/db/contacts_db/sizeStorer.wt" afterPath="$PROJECT_DIR$/db/contacts_db/sizeStorer.wt" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,21 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="contacts.store.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/persistence/contacts.store.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.list.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.list.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.list.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+            <state relative-caret-position="1197">
+              <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -55,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.update.form.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact.update.form.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.update.form.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="84">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -68,11 +58,9 @@
       <file leaf-file-name="contact.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
+            <state relative-caret-position="595">
               <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,8 +68,8 @@
       <file leaf-file-name="contact.add.form.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/react/contact.add.form.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="32" column="67" lean-forward="false" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+            <state relative-caret-position="294">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,9 +88,11 @@
       <file leaf-file-name="contact.store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/mobx/contact.store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,6 +112,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listing.route.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/listing.route.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -173,7 +173,6 @@
         <option value="$PROJECT_DIR$/assets/react/contact.add.form.jsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/assets/mobx/contact.store.js" />
         <option value="$PROJECT_DIR$/app/persistence/contacts.store.mock.js" />
         <option value="$PROJECT_DIR$/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/dev.env" />
@@ -182,9 +181,10 @@
         <option value="$PROJECT_DIR$/app/persistence/contacts.store.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/assets/css/main.less" />
-        <option value="$PROJECT_DIR$/assets/react/contact.update.form.jsx" />
         <option value="$PROJECT_DIR$/assets/react/contact.jsx" />
         <option value="$PROJECT_DIR$/assets/react/contact.list.jsx" />
+        <option value="$PROJECT_DIR$/assets/mobx/contact.store.js" />
+        <option value="$PROJECT_DIR$/assets/react/contact.update.form.jsx" />
       </list>
     </option>
   </component>
@@ -237,7 +237,19 @@
               <item name="contact-listing" type="b2602c69:ProjectViewProjectNode" />
               <item name="contact-listing" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contact-listing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="contact-listing" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="persistence" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contact-listing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="contact-listing" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contact-listing" type="b2602c69:ProjectViewProjectNode" />
@@ -364,12 +376,13 @@
       <workItem from="1528360149847" duration="4252000" />
       <workItem from="1528786883200" duration="22210000" />
       <workItem from="1528882169457" duration="875000" />
-      <workItem from="1528957635228" duration="15277000" />
+      <workItem from="1528957635228" duration="16688000" />
+      <workItem from="1529042713625" duration="2887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187846000" />
+    <option name="totallyTimeSpent" value="192144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="-9" width="1845" height="1098" extended-state="6" />
@@ -709,15 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/listing.route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +738,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="158">
             <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -742,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/persistence/contacts.store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
+        <state relative-caret-position="1197">
           <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding />
         </state>
@@ -764,34 +767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/mobx/contact.store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/main.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/react/contact.update.form.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/react/contact.add.form.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="32" column="67" lean-forward="false" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -804,20 +783,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/react/contact.list.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/react/contact.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
+        <state relative-caret-position="595">
           <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/listing.route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/mobx/contact.store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/react/contact.list.jsx">
+    <entry file="file://$PROJECT_DIR$/assets/react/contact.add.form.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        <state relative-caret-position="294">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/react/contact.update.form.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>

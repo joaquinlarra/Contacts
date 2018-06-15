@@ -9,8 +9,18 @@ class UpdateContact extends React.Component{
         this.handleAnnullaClick = this.handleAnnullaClick.bind(this);
     }
 
-    handleSubmit(event){
+    handleChange(event){
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
 
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit(event){
+        console.log(this.state);
     }
 
     handleAnnullaClick(event){
@@ -19,9 +29,8 @@ class UpdateContact extends React.Component{
     }
 
     defaultState(){
-        return {
-
-        };
+        // assign from this.props.json
+        return {_id : '', name : '', number : ''};
     }
 
     render(){
@@ -29,11 +38,14 @@ class UpdateContact extends React.Component{
             <li className="list-group-item justify-content-between">
                 <div class="input-group col-lg-12">
                 <form>
+                    <input type="hidden" value={this.props.json._id}/>
                     <div class="col-lg-5">
-                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" value={this.props.json.name}/>
+                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1"
+                               value={this.props.json.name}/>
                     </div>
                     <div class="col-lg-5">
-                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" value={this.props.json.number}/>
+                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1"
+                               value={this.props.json.number}/>
                     </div>
                     <div class="col-lg-2">
                         <button className="btn btn-success oi oi-check" data-glyph="check"></button>
