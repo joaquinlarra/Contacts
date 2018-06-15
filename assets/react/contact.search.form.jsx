@@ -24,12 +24,14 @@ class SearchContact extends React.Component{
 
     render(){
         return(
+            <div>
             <form class="form-inline">
-                <div class="form-group">
+                <div class="form-group search-bar">
                     <input type="text" class="form-control col-sm-12 adjust-margin" name="search" placeholder="Search..."
                            value={this.state.textSearch} onChange={this.handleChange}/>
                 </div>
             </form>
+            </div>
         )
     }
 }
