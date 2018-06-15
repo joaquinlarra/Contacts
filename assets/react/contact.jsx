@@ -1,5 +1,6 @@
 import React from 'react';
 import UpdateContact from "./contact.update.form.jsx";
+import DeleteContact from "./contact.delete.jsx";
 
 class Contact extends React.Component{
     constructor(props) {
@@ -42,7 +43,7 @@ class Contact extends React.Component{
                 <div className="pull-left">
                     <span onClick={this.toggleUpdateView} className="oi oi-pencil adjust-margin pointer" data-glyph="pencil"></span>
                     &nbsp;
-                    <span className="oi oi-delete pointer" data-glyph="delete"></span>
+                    <DeleteContact _id={this.props.json._id}/>
                 </div>;
         } else {
             options = <div className="pull-left"></div>;

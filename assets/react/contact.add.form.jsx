@@ -21,9 +21,9 @@ class AddContact extends React.Component{
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log("REACT > add new contact");
+        console.log("react contact.add : " + this.state.name + ", " + this.state.number);
         this.props.store.add(this.state);
-        console.log("REACT > calling load for refresh");
+        console.log("react contact.add : calling load for refresh");
         this.props.store.load();
         this.setState({name: '', number: ''});
     }

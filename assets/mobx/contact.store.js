@@ -22,7 +22,7 @@ class ContactStore {
                 if (error)
                     console.error(error);
                 else {
-                	console.log("mobx contact.store > Server response body: " + results.text);
+                	console.log("mobx contact.store - load response: " + results.text);
                     const data = JSON.parse(results.text);
                     this.contacts.splice(0,this.contacts.length);
                     for(var i = 0; i < data.length; i++){
@@ -43,7 +43,7 @@ class ContactStore {
                   if (error)
                       console.error(error);
                   else {
-                      console.log("mobx contact.store > Server response body: " + results.text);
+                      console.log("mobx contact.store - add response: " + results.text);
                   }
                 });
   }
@@ -59,7 +59,7 @@ class ContactStore {
                   if (error)
                       console.error(error);
                   else {
-                      console.log("mobx contact.store > Server response body: " + results.text);
+                      console.log("mobx contact.store - update response: " + results.text);
                   }
               });
     }
