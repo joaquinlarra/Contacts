@@ -21,12 +21,6 @@ class Contact extends React.Component{
 
     handleMouseOver(event){
         event.preventDefault();
-        /*
-        this.setState((prevState, props) => ({
-            updateView: prevState.updateView,
-            showButtons: !prevState.showButtons
-        }));
-        */
     }
 
     defaultState(){
@@ -43,7 +37,7 @@ class Contact extends React.Component{
                 <div className="pull-left">
                     <span onClick={this.toggleUpdateView} className="oi oi-pencil adjust-margin pointer" data-glyph="pencil"></span>
                     &nbsp;
-                    <DeleteContact _id={this.props.json._id}/>
+                    <DeleteContact _id={this.props.json._id} store={this.props.store}/>
                 </div>;
         } else {
             options = <div className="pull-left"></div>;

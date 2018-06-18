@@ -32,7 +32,7 @@ class ContactStore {
             });
   }
 
-  add(contact){
+  add(contact, callback, callbackError){
       console.log("mobx contact.store - add: " + contact);
       superagent
           .post("http://" + process.env.API_HOST + '/contacts/add')
@@ -40,41 +40,47 @@ class ContactStore {
           .send(contact)
           .end(
               (error, results) => {
-                  if (error)
+                  if (error) {
                       console.error(error);
-                  else {
-                      console.log("mobx contact.store - add response: " + results.text);
+                      callbackError(error);
+                  } else {
+                      console.log("mobx contact.store - add response: " + results.statusText);
+                      callback();
                   }
                 });
   }
 
-  update(contact){
+  update(contact, callback, callbackError){
       console.log("mobx contact.store - update: " + contact);
       superagent
-          .post("http://" + process.env.API_HOST + '/contacts/update')
+          .put("http://" + process.env.API_HOST + '/contacts/update')
           .set('Accept', 'application/json')
           .send(contact)
           .end(
               (error, results) => {
-                  if (error)
+                  if (error) {
                       console.error(error);
-                  else {
-                      console.log("mobx contact.store - update response: " + results.text);
+                      callbackError(error);
+                  } else {
+                      console.log("mobx contact.store - update response: " + results.statusText);
+                      callback();
                   }
               });
     }
 
-    delete(id){
+    delete(id, callback, callbackError){
         console.log("mobx contact.store - delete: " + id);
         superagent
             .delete("http://" + process.env.API_HOST + '/contacts/delete/'+ id)
             .set('Accept', 'application/json')
             .end(
                 (error, results) => {
-                    if (error)
+                    if (error) {
                         console.error(error);
-                    else {
-                        console.log("mobx contact.store - delete response: " + results.text);
+                        callbackError(error);
+                    } else {
+                        console.log("mobx contact.store - delete response: " + results.statusText);
+                        callback();
                     }
                 });
     }

@@ -50,9 +50,10 @@ class ContactList extends React.Component{
         if (this.state.data.length == 0){
             components = <span>No contacts found.</span>;
         } else {
+            const contactStore = this.props.store;
             components = this.state.data.map(function(item) {
                 return (
-                    <Contact key={item._id} json={item} />
+                    <Contact key={item._id} json={item} store={contactStore} />
                 );
             });
         }

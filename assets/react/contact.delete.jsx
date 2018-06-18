@@ -11,7 +11,16 @@ class DeleteContact extends React.Component{
     handleClick(event){
         event.preventDefault();
         console.log("react contact.delete " + this.state._id);
-        //TODO contactStore.delete call
+        const STORE = this.props.store;
+        STORE.delete(this.state._id,
+            function(){
+                console.log("react contact.delete - reload");
+                STORE.load();
+            },
+            function(err){
+                alert(err);
+            }
+        );
     }
 
     defaultState(){

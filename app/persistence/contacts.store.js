@@ -7,6 +7,7 @@
  * related collection.
  */
 
+var ObjectId = require('mongodb').ObjectID;
 const DB = require('monk')(process.env.DB_HOST);
 const contacts = DB.get('contact');
 console.log("Connection to DB "  +process.env.DB_HOST+ " alive.");
@@ -35,7 +36,7 @@ exports.insertOne = function(contact, callback, callbackError){
 }
 
 exports.updateOne = function(contact, callback, callbackError){
-    contacts.updateOne({_id : ObjectId(contact.id)}, {$set : {name : contcat.name, number : contact.number}})
+    contacts.updateOne({_id : new ObjectId(contact.id)}, {$set : {name : contcat.name, number : contact.number}})
 		.then(() => {
 		    console.log("contacts.store - updated contact with id " + contact.id);
 		    callback();
@@ -48,7 +49,7 @@ exports.updateOne = function(contact, callback, callbackError){
 }
 
 exports.deleteOne = function(id, callback, callbackError){
-    contacts.remove({ _id: ObjectId(id)})
+    contacts.remove({ _id: new ObjectId(id)})
 		.then(() => {
 		    console.log("contacts.store - deleted contact with id " + id);
 		    callback();

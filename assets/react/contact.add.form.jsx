@@ -7,6 +7,7 @@ class AddContact extends React.Component{
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.addCallback = this.addCallback.bind(this);
     }
 
     handleChange(event) {
@@ -22,7 +23,12 @@ class AddContact extends React.Component{
     handleSubmit(event) {
         event.preventDefault();
         console.log("react contact.add : " + this.state.name + ", " + this.state.number);
-        this.props.store.add(this.state);
+        this.props.store.add(this.state, this.addCallback, function(err){
+            alert(err);
+        });
+    }
+
+    addCallback(){
         console.log("react contact.add : calling load for refresh");
         this.props.store.load();
         this.setState({name: '', number: ''});
