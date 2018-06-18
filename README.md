@@ -21,6 +21,7 @@ Main dependencies for application are
 - Express
 - Monk
 - React
+- Mobx
 - Bootstrap 3.x
 
 ## 1.3 Configuration
