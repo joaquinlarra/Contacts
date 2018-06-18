@@ -1,9 +1,9 @@
 {
   "name": "contact-listing-assets",
-  "description": "This is my first nodejs app. It manage a list of contacts.",
+  "description": "This is my first nodejs app. It manages a list of contacts.",
   "main": "index.js",
   "authors": [
-    "Vincent"
+    "Vincenzo Longo"
   ],
   "license": "GPL-3.0",
   "keywords": [

@@ -9,8 +9,6 @@ var contactsStore = require('../persistence/contacts.store');
 
 exports.listAll = function(req, res) {
 	_logRequest("LIST ALL", req);
-	
-  	//res.send( contactsStore.loadAll() );
 
   	contactsStore.loadAll(
   		function(docs){
@@ -25,9 +23,6 @@ exports.listAll = function(req, res) {
 
 exports.insert = function(req, res){
 	_logRequest("INSERT", req);
-
-	//contactsStore.insertOne(req.body);
-	//res.send( null );
 
     contactsStore.insertOne(
     	req.body,
@@ -45,9 +40,6 @@ exports.insert = function(req, res){
 exports.update = function(req, res){
 	_logRequest("UPDATE", req);
 
-	//contactsStore.updateOne(req.body);
-	//res.send( null );
-
     contactsStore.updateOne(
         req.body,
         function(){
@@ -62,9 +54,6 @@ exports.update = function(req, res){
 
 exports.delete = function(req, res){
 	_logRequest("DELETE", req);
-
-	//contactsStore.deleteOne(req.params.id);
-	//res.send( null );
 
     contactsStore.deleteOne(
         req.params.id,
