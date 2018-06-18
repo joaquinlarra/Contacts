@@ -1,8 +1,11 @@
 'use strict';
 
-//TODO
-// - introduce X-Secret-Key header for security
-// - introduce payload validation
+/**
+ * vincenzo.longo
+ *
+ * Contact controller layer:
+ * it would be correct introduce X-Secret-Key header for security and payload validation.
+ */
 
 var moment = require('moment');
 var contactsStore = require('../persistence/contacts.store');

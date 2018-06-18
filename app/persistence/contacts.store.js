@@ -1,7 +1,11 @@
 'use strict';
 
-// Contact model has fields
-// id, name, number
+/**
+ * vincenzo.longo
+ *
+ * MongoDb persistence layer. It works on Contact model mapped to
+ * related collection.
+ */
 
 const DB = require('monk')(process.env.DB_HOST);
 const contacts = DB.get('contact');

@@ -1,22 +1,25 @@
 'use strict';
 
+/**
+ * vincenzo.longo
+ *
+ * Contact Rest API layer defined through an Express app instance.
+ */
+
 module.exports = function(app) {
   var adviceController = require('../controller/advice.controller');
-  var listingController = require('../controller/contacts.controller');
+  var contactsController = require('../controller/contacts.controller');
 
   app.route('/contacts/all')
-    .get(listingController.listAll)
-    .post(adviceController.error404);
+      .post(adviceController.error404) // example on wrong method error management
+      .get(contactsController.listAll);
 
   app.route('/contacts/add')
-  	.get(adviceController.error404)
-  	.post(listingController.insert);
+      .post(contactsController.insert);
 
   app.route('/contacts/update')
-  	.get(adviceController.error404)
-  	.post(listingController.update);
+      .put(contactsController.update);
 
   app.route('/contacts/delete/:id')
-  	.get(adviceController.error404)
-  	.post(listingController.delete);
+      .delete(contactsController.delete);
 };

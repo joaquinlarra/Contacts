@@ -64,6 +64,21 @@ class ContactStore {
               });
     }
 
+    delete(id){
+        console.log("mobx contact.store - delete: " + id);
+        superagent
+            .delete("http://" + process.env.API_HOST + '/contacts/delete/'+ id)
+            .set('Accept', 'application/json')
+            .end(
+                (error, results) => {
+                    if (error)
+                        console.error(error);
+                    else {
+                        console.log("mobx contact.store - delete response: " + results.text);
+                    }
+                });
+    }
+
 }
 
 export default ContactStore;
