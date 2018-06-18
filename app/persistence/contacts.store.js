@@ -3,10 +3,9 @@
 // Contact model has fields
 // id, name, number
 
-console.log("BE ENV : "  +process.env.DB_HOST);
-
-var DB = require('monk')(process.env.DB_HOST);
-const contacts = DB.get('contact'); // COLLECTION
+const DB = require('monk')(process.env.DB_HOST);
+const contacts = DB.get('contact');
+console.log("Connection to DB "  +process.env.DB_HOST+ " alive.");
 
 exports.loadAll = function(callback, callbackError){
     contacts.find().then((docs) => {

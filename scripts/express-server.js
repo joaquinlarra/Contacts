@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var routes = require('../app/routes/listing.route.js'); //importing route
+var routes = require('../app/routes/contacts.route.js'); //importing route
 routes(app); //register the route
 
 
