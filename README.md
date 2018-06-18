@@ -1,9 +1,8 @@
 # NodeJS MongoDB React
 
 This app simulates a contact list management whose data are stored into an instance 
-of mongo db.
-The goal is have a scaffold with Rest API running on Express, and front-end layer
-developed through React.
+of mongo db. The goal is have a scaffold with Rest API accessing to MongoDb and running on Express, 
+and front-end layer developed through React.
 
 ## 1.1	Environment
 
@@ -13,8 +12,18 @@ developed through React.
 - MongoDb 	3.6.2
 - IDE like WebStorm
 
+## 1.2 Architecture overview
 
-## 1.2 Dependencies
+The project contains both back-end and front-end layer.
+
+The back-end layer defined into **/app** root folder has been developed
+through MVC pattern and contains Rest API definition, model and persistence layer.
+
+The front-end layer defined into **/assets** root folder has been developed 
+through Flux pattern and contains Presentation definition and store data access.
+
+
+## 1.3 Dependencies
 
 Main dependencies for application are
 - Webpack 3
@@ -24,7 +33,7 @@ Main dependencies for application are
 - Mobx
 - Bootstrap 3.x
 
-## 1.3 Configuration and build
+## 1.4 Configuration and build
 
 **npm install -g bower**
 
@@ -35,26 +44,34 @@ Main dependencies for application are
 **npm run build:dev**
 
 
-## 1.4 Database creation and configuration
+## 1.5 Database creation and configuration
 
 start database server v3.6.2
 
 **mongod --dbpath "<project_root>\db\contacts_db"**
 (eg. C:\projects\fe\contact-listing\db\contacts_db)
 
-Just for test, connect to database **mongo**
+Just for test, connect to database executing **mongo** command
 
 switch to schema **use contacts_db**
 
 test query on customer collection **db.contact.find()**
 
-(already executed **db.createCollection("contact");**)
+(for collection creation has been executed **db.createCollection("contact");**)
 
-## 1.5 Profiles and Build
+## 1.6 Profiles and Build
 
-- **npm run build:dev** for development environment
+**npm run build:dev** for development environment build. All assets will be processed 
+and written as webapack configuration into **/build** root folder.
 
-## 1.6 Execution
+**Back-end** env. variables have been defined into **dev.env** file and loaded
+through **env-cmd**.
+
+**Front-end** env. variables have been defined into **webpack.config.dev.js** instead.
+
+Other env profiles should be defined.
+
+## 1.7 Execution
 
 **npm run start-express:dev**
 
