@@ -1,6 +1,6 @@
 # NodeJS MongoDB React
 
-This app simulates a contact list management whose data are stored into an insstance 
+This app simulates a contact list management whose data are stored into an instance 
 of mongo db.
 The goal is have a scaffold with Rest API running on Express, and front-end layer
 developed through React.
@@ -24,16 +24,22 @@ Main dependencies for application are
 - Mobx
 - Bootstrap 3.x
 
-## 1.3 Configuration
+## 1.3 Configuration and build
 
 **npm install -g bower**
+
 **npm install**
+
+**bower install**
+
+**npm run build:dev**
 
 
 ## 1.4 Database creation and configuration
 
 start database server v3.6.2
-- **mongod --dbpath "<project_root>\db\contacts_db"**
+
+**mongod --dbpath "<project_root>\db\contacts_db"**
 (eg. C:\projects\fe\contact-listing\db\contacts_db)
 
 Just for test, connect to database **mongo**
@@ -50,7 +56,9 @@ test query on customer collection **db.contact.find()**
 
 ## 1.6 Execution
 
-- **npm run start-express:dev**
+**npm run start-express:dev**
+
+**Visit http://localhost:3000/**
 
 ## 1.8 Refs
 
