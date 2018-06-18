@@ -48,6 +48,7 @@
     "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0",
     "express": "^4.14.0",
+    "gulp-less": "^3.4.0",
     "mobx": "^2.6.2",
     "mobx-api": "^1.1.4",
     "mobx-react": "^4.3.5",
@@ -67,10 +68,10 @@
     "contact",
     "listing",
     "nodejs",
-    "react",
-    "mobx"
+    "mobx",
+    "react"
   ],
-  "author": "Vincenzo Longo",
+  "author": "Vincent",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/V1nz3nt/contact-listing/issues"
