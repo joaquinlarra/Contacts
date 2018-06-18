@@ -7,8 +7,8 @@ developed through React.
 
 ## 1.1	Environment
 
-- NodeJS 	6.11.1
-- Npm 		3.10.10
+- NodeJS 	10.x
+- Npm 		6.x
 - Bower 	1.8.4
 - MongoDb 	3.6.2
 - IDE like WebStorm
