@@ -23,12 +23,14 @@ class AddContact extends React.Component{
     handleSubmit(event) {
         event.preventDefault();
         console.log("react contact.add : " + this.state.name + ", " + this.state.number);
+
         this.props.store.add(this.state, this.addCallback, function(err){
             alert(err);
         });
     }
 
     addCallback(){
+        //TODO call this.props.toggleLoaderHandler();
         console.log("react contact.add : calling load for refresh");
         this.props.store.load();
         this.setState({name: '', number: ''});

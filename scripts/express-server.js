@@ -15,10 +15,6 @@ app.use(bodyParser.json());
 var routes = require('../app/routes/contacts.route.js'); //importing route
 routes(app); //register the route
 
-
 app.listen(port);
 
-
-console.log("---------------------------------------------");
 console.log('RESTful API server started on port ' + port);
-console.log("---------------------------------------------");

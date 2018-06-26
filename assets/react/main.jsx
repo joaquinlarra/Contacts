@@ -8,13 +8,23 @@ import Toggle from "./toggle.jsx";
 class App extends React.Component{
 	constructor (props) {
 	    super(props);
+	    this.state = {loading : false};
+	    this.toggleLoader = this.toggleLoader.bind(this);
   	}
 
+  	toggleLoader(){
+        this.setState((prevState, props) => ({
+            loading: !prevState.loading
+        }));
+    }
+
     render(){
+	    var loaderClass = !this.state.loading ? "hidden" : "";
         return (
             <div>
-                <Toggle key={1} css="oi oi-plus" icon="plus" component={<AddContact store={this.props.store}/>} />
-                <ContactList store={this.props.store}/>
+                <div id="loader" className={loaderClass}></div>
+                <Toggle key={1} css="oi oi-plus" icon="plus" component={<AddContact store={this.props.store} toggleLoaderHandler={this.toggleLoader}/>} />
+                <ContactList store={this.props.store} toggleLoaderHandler={this.toggleLoader}/>
             </div>
         );
     }
