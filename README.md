@@ -1,10 +1,10 @@
-# NodeJS MongoDB React
+# Contacts
 
 This app simulates a contact list management whose data are stored into an instance 
 of mongo db. The goal is have a scaffold with Rest API accessing to MongoDb and running on Express, 
 and front-end layer developed through React.
 
-## 1.1	Environment
+## 1.1	Prequisites
 
 - NodeJS 	10.x
 - Npm 		6.x
@@ -12,14 +12,14 @@ and front-end layer developed through React.
 - MongoDb 	3.6.2
 - IDE like WebStorm
 
-## 1.2 Architecture overview
+## 1.2 Architecture
 
-The project contains both back-end and front-end layer.
+The project provides service for the server and the client.
 
-The back-end layer defined into **/app** root folder has been developed
+The server layer defined into **/app** root folder has been developed
 through MVC pattern and contains Rest API definition, model and persistence layer.
 
-The front-end layer defined into **/assets** root folder has been developed 
+The client layer defined into **/assets** root folder has been developed 
 through Flux pattern and contains Presentation definition and store data access.
 
 
